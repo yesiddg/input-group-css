@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style type="text/css">
+    * {
+      box-sizing: border-box;  
+    }
+
+    /**
+     * Versión Flexbox.
+     */
+    .input-group {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      width: 100%;
+      border: 1px solid #ced4da;
+    }
+
+    .input-group__addon {
+      display: flex;
+      align-items: center;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      appearance: none;
+      background-color: #e9ecef;
+      border: none;
+    }
+
+    .input-group__addon:first-child {
+      border-right: 1px solid #ced4da;
+    }
+
+    .input-group__addon:last-child {
+      border-left: 1px solid #ced4da;
+    }
+
+    .input-group .input {
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      min-width: 0;
+      margin-left: 2px;
+      margin-right: 2px;
+      border: none;
+    }
+
+    /**
+     * Focus state
+     */
+    .input-group__addon:focus, .input:focus, .input-group:focus-within {
+      /* Boostrap */
+      /*border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);*/
+
+      /* Bulma css */
+      border-color: #485fc7;
+      outline: 0;
+      box-shadow: 0 0 0 0.125em rgb(72 95 199 / 25%);
+    }
+
+    .input-group:focus-within .input {
+      border-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-group">
+    <button class="input-group__addon" type="button">-</button>
+    <input class="input" type="text">
+    <button class="input-group__addon" type="button">+</button>
+  </div>
+
+  <div class="input-group">
+    <button class="input-group__addon" type="button">@</button>
+    <input class="input" type="text">
+  </div>
+
+  <div class="input-group">
+    <input class="input" type="text">
+    <button class="input-group__addon" type="button">@</button>
+  </div>
+
+  <div class="input-group">
+    <input class="input" type="text">
+    <button class="input-group__addon" type="button">@</button>
+    <input class="input" type="text">
+  </div>
+</body>
+</html>
